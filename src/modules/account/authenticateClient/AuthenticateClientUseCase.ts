@@ -35,13 +35,14 @@ export class AuthenticateClientUseCase {
         }
 
         //Gerar token
-
+        //frase do token MD Generator
+        //Acesso liberado com sucesso, pode acessar a página e seguir conforme seu entendimento. Fique a vontade!
         const token = sign({ username }, "69d34430646676abf6cf6ab8daca5ee1", {
             subject: client.id,
             expiresIn: "1d",
         })
 
         return token;
-    
+
     }
 }
